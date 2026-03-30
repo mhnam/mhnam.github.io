@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Minhyuk Nam</title>
+<link href="https://fonts.googleapis.com/css2?family=Epilogue:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root {
+  --ink: #1a1a1a;
+  --body: #444;
+  --muted: #777;
+  --accent: #8C1515;
+  --border: #ddd;
+  --bg: #fff;
+}
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; }
+body {
+  font-family: 'Epilogue', system-ui, -apple-system, sans-serif;
+  color: var(--body);
+  background: var(--bg);
+  font-size: 15px;
+  line-height: 1.75;
+  -webkit-font-smoothing: antialiased;
+}
+::selection { background: #e8d5d5; }
+a { color: var(--accent); text-decoration: none; }
+a:hover { text-decoration: underline; }
+
+/* ── Nav ── */
+nav {
+  max-width: 740px; margin: 0 auto;
+  padding: 1.6rem 1.5rem .8rem;
+  display: flex; justify-content: flex-end; gap: 1.8rem;
+}
+nav a { font-size: .85rem; font-weight: 500; color: var(--muted); letter-spacing: .01em; }
+nav a:hover { color: var(--ink); text-decoration: none; }
+
+/* ── Hero / About ── */
+.hero {
+  max-width: 740px; margin: 0 auto;
+  padding: 1.5rem 1.5rem 2.5rem;
+  display: grid; grid-template-columns: 220px 1fr; gap: 2rem; align-items: start;
+}
+.hero-photo {
+  width: 100%; aspect-ratio: 4/5; border-radius: 6px; overflow: hidden;
+  background: #f0f0f0; display: flex; align-items: center; justify-content: center;
+  font-size: .8rem; color: var(--muted);
+}
+.hero-photo img { width: 100%; height: 100%; object-fit: cover; }
+.hero-text h1 { font-size: 1.85rem; font-weight: 700; color: var(--ink); line-height: 1.2; margin-bottom: .15rem; letter-spacing: -.02em; }
+.hero-text .role { font-size: .95rem; color: var(--muted); margin-bottom: .9rem; }
+.hero-text .bio { font-size: .92rem; line-height: 1.8; color: var(--body); }
+.hero-text .fields { margin-top: .8rem; font-size: .85rem; color: var(--muted); }
+.hero-text .fields strong { color: var(--body); font-weight: 600; }
+.hero-text .links { margin-top: 1rem; display: flex; gap: 1.2rem; font-size: .85rem; }
+
+/* ── Sections ── */
+.container { max-width: 740px; margin: 0 auto; padding: 0 1.5rem; }
+.section { padding: 1.8rem 0; border-top: 1px solid var(--border); }
+.section h2 { font-size: 1.15rem; font-weight: 700; color: var(--ink); margin-bottom: 1rem; letter-spacing: -.01em; }
+.cat-label { font-size: .78rem; font-weight: 600; text-transform: uppercase; letter-spacing: .08em; color: var(--muted); margin-top: 1.4rem; margin-bottom: .5rem; }
+.cat-label:first-of-type { margin-top: 0; }
+
+/* ── Papers ── */
+.paper { margin-bottom: 1.1rem; }
+.paper .title { font-weight: 600; font-size: .93rem; color: var(--ink); line-height: 1.55; }
+.paper .meta { font-size: .85rem; color: var(--muted); margin-top: .05rem; }
+.paper .meta em { font-style: italic; color: var(--accent); }
+.paper .paper-links { margin-top: .3rem; display: flex; gap: .8rem; font-size: .82rem; }
+.paper .paper-links a, .paper .paper-links button {
+  font-family: inherit; font-size: .82rem; color: var(--accent);
+  background: none; border: none; padding: 0; cursor: pointer;
+}
+.paper .paper-links a:hover, .paper .paper-links button:hover { text-decoration: underline; }
+.paper .abstract {
+  display: none; margin-top: .5rem; padding: .7rem 0 .7rem 1rem;
+  border-left: 2px solid var(--border); font-size: .85rem; line-height: 1.8; color: var(--muted);
+}
+.paper .abstract.open { display: block; }
+
+/* ── Publications ── */
+.pub { margin-bottom: .8rem; }
+.pub .title { font-weight: 600; font-size: .9rem; color: var(--ink); line-height: 1.55; }
+.pub .meta { font-size: .83rem; color: var(--muted); }
+.pub .meta em { font-style: italic; color: var(--accent); }
+
+/* ── Teaching ── */
+.teach-group { margin-bottom: 1rem; }
+.teach-group h4 { font-size: .9rem; font-weight: 600; color: var(--ink); margin-bottom: .15rem; }
+.teach-group h4 span { font-weight: 400; color: var(--muted); }
+.teach-level { font-size: .75rem; font-weight: 600; text-transform: uppercase; letter-spacing: .06em; color: var(--accent); margin-top: .35rem; }
+.teach-courses { font-size: .85rem; color: var(--body); line-height: 1.7; }
+
+/* ── Footer ── */
+footer { max-width: 740px; margin: 0 auto; padding: 2rem 1.5rem; border-top: 1px solid var(--border); font-size: .78rem; color: var(--muted); }
+
+/* ── Mobile ── */
+@media (max-width: 640px) {
+  .hero { grid-template-columns: 1fr; gap: 1.2rem; }
+  .hero-photo { width: 180px; aspect-ratio: 4/5; }
+  nav { padding: 1.2rem 1.5rem .5rem; gap: 1.2rem; }
+}
+</style>
+</head>
+<body>
+
+<nav>
+  <a href="#research">Research</a>
+  <a href="#teaching">Teaching</a>
+  <a href="Minhyuk_Nam_CV.pdf">CV</a>
+</nav>
+
+<div class="hero">
+  <div class="hero-photo">[ Your photo ]</div>
+  <div class="hero-text">
+    <h1>Minhyuk Nam</h1>
+    <p class="role">PhD Candidate in Economics, Carnegie Mellon University</p>
+    <p class="bio">
+      I study how environmental and energy markets can be better designed.
+      My research uses dynamic mechanism design, structural estimation, and
+      industrial organization to examine climate agreements, emission permit
+      trading, and electricity storage markets.
+    </p>
+    <p class="fields"><strong>Fields:</strong> Environmental Economics, Industrial Organization, Mechanism Design</p>
+    <div class="links">
+      <a href="mailto:minhyukn@andrew.cmu.edu">Email</a>
+      <a href="https://scholar.google.com">Google Scholar</a>
+      <a href="Minhyuk_Nam_CV.pdf">CV (PDF)</a>
+    </div>
+  </div>
+</div>
+
+<div class="container">
+  <div class="section" id="research">
+    <h2>Research</h2>
+    <div class="cat-label">Working Papers</div>
+
+    <div class="paper">
+      <div class="title">Free Allocation, Trading Frictions, and Market Efficiency in Emission Markets</div>
+      <div class="meta">with Robert A. Miller, 2026</div>
+      <div class="paper-links">
+        <a href="#">Paper</a>
+        <button onclick="toggle(this)">+ Abstract</button>
+      </div>
+      <div class="abstract">The EU Emissions Trading System initially gave roughly 90 percent of carbon permits free to incumbent firms but is now transitioning to full auctioning. We study whether free allocation reduces market efficiency by discouraging trading and creating thin markets. Using EU ETS transaction-level data, we document that firms receiving free permits trade less frequently than firms that must purchase them, concentrating trading activity among financial intermediaries. We develop and estimate a dynamic structural model of production, banking, and trading decisions under participation costs to quantify efficiency losses from permit misallocation across heterogeneous emitters.</div>
+    </div>
+
+    <div class="paper">
+      <div class="title">Optimal Climate Treaties as Delegation with Externalities: the Case of Dynamic Carbon Production</div>
+      <div class="meta">with Ali Shourideh, 2026</div>
+      <div class="paper-links">
+        <a href="#">Paper</a>
+        <button onclick="toggle(this)">+ Abstract</button>
+      </div>
+      <div class="abstract">International climate agreements must delegate emission decisions to sovereign countries that hold private information about their abatement costs while managing a global externality whose damages depend on the cumulative stock of atmospheric carbon. We formulate this problem using dynamic mechanism design and characterize the structure of optimal agreements. Our two main results are that optimal treaties exhibit a cutoff structure in which countries with sufficiently low abatement costs are induced to reduce emissions, and we derive conditions under which simple "total carbon budget" mechanisms implement the social optimum.</div>
+    </div>
+
+    <div class="paper">
+      <div class="title">Group Composition and Group Decision-Making: Evidence from Municipal Council Meetings in South Korea</div>
+      <div class="meta">with Jay Euijung Lee and Martina Zanella, 2026</div>
+      <div class="paper-links">
+        <a href="#">Paper</a>
+      </div>
+    </div>
+
+    <div class="cat-label">Work in Progress</div>
+    <div class="paper">
+      <div class="title">Compensating Flexibility: How Capacity Markets Distort Battery Storage Dispatch</div>
+    </div>
+
+    <div class="cat-label">Publications</div>
+
+    <div class="pub">
+      <div class="title">The Effects of Indoor Temperature and Humidity on Local Transmission of COVID-19</div>
+      <div class="meta">with H.J. Park, S.-G. Lee, J.S. Oh, S. Barrett, S. Lee, W. Hwang · <em>PLoS ONE</em>, 2022</div>
+    </div>
+    <div class="pub">
+      <div class="title">COVID-19 and Job Market: Trends and Comparison with the 2008 Financial Crisis in South Korea</div>
+      <div class="meta">with S. Lee · <em>Seoul Journal of Economics</em>, 2021</div>
+    </div>
+    <div class="pub">
+      <div class="title">Does Ramadan Harm Infant Health? Evidence from Ethiopia</div>
+      <div class="meta">with S. Lee, D. Jeong, W. Lee · <em>International Economic Journal</em>, 2020</div>
+    </div>
+    <div class="pub">
+      <div class="title">Impact of the Clean Air Act on Air Pollution and Infant Health: Evidence from South Korea</div>
+      <div class="meta">with S. Lee, H. Yoo · <em>Economics Letters</em>, 2018</div>
+    </div>
+  </div>
+
+  <div class="section" id="teaching">
+    <h2>Teaching</h2>
+    <div class="teach-group">
+      <h4>Carnegie Mellon University <span>· 2024–present</span></h4>
+      <div class="teach-level">PhD</div>
+      <div class="teach-courses">Econometrics II · Econometrics III · Advanced Econometrics</div>
+      <div class="teach-level">MBA</div>
+      <div class="teach-courses">Managerial Economics · Statistical Decision Making</div>
+      <div class="teach-level">Undergraduate</div>
+      <div class="teach-courses">Principles of Macroeconomics · Environmental Economics · Regression Analysis · Probability & Statistics</div>
+    </div>
+    <div class="teach-group">
+      <h4>Sogang University <span>· 2018–2022</span></h4>
+      <div class="teach-level">Undergraduate</div>
+      <div class="teach-courses">Urban Economics · Python Programming</div>
+    </div>
+  </div>
+</div>
+
+<footer>&copy; 2026 Minhyuk Nam</footer>
+
+<script>
+function toggle(btn) {
+  const abs = btn.parentElement.nextElementSibling;
+  const open = abs.classList.toggle('open');
+  btn.textContent = open ? '\u2212 Abstract' : '+ Abstract';
+}
+</script>
+</body>
+</html>
