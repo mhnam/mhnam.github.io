@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>EUTL Explorer — Minhyuk Nam</title>
+<link rel="stylesheet" href="assets/css/site.css">
+</head>
+<body data-page="projects">
+<div class="shell">
+  <aside id="sidebar" class="sidebar"></aside>
+  <main class="content wide">
+    <div id="mobilebar" class="mobilebar"></div>
+    <div class="page">
+      <div class="eyebrow"><a href="projects.html">Projects</a> / EUTL Explorer</div>
+      <div class="sechead" style="margin-bottom:8px">
+        <h1>EUTL Explorer</h1>
+        <div style="display:flex;gap:14px;font-size:12.5px"><a href="https://github.com/mhnam">Open full dashboard ↗</a><a href="https://github.com/mhnam">Code ↗</a></div>
+      </div>
+      <div style="display:flex;gap:8px;margin:0 0 14px">
+        <span class="tag">Python</span><span class="tag">Dash</span><span class="tag">EU ETS</span>
+      </div>
+      <p style="margin:0 0 20px;max-width:600px">Explore every allowance transfer in the EU Emissions Trading System by venue, sector, and year — built on the cleaned Union Transaction Log panel behind my research. The demo below is live; the full dashboard adds sector filters and firm-level drilldown.</p>
+      <div class="chartbox">
+        <div class="venuebtns" id="venue-btns">
+          <button class="venuebtn active" data-venue="auction">Auctions</button>
+          <button class="venuebtn" data-venue="exchange">Exchange</button>
+          <button class="venuebtn" data-venue="otc">OTC</button>
+        </div>
+        <div id="eutl-chart"></div>
+        <div class="chartnote">Annual transfer volume by venue, million EUAs. Demo data — replace this block with your embedded Plotly/Observable figure (an &lt;iframe&gt; works).</div>
+      </div>
+      <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:24px">
+        <div>
+          <div class="seclabel" style="display:block;margin-bottom:8px">Data</div>
+          <p style="margin:0;font-size:13px;color:var(--muted);line-height:1.7">Complete UTL transfer record 2013–2024, linked to firm identifiers and verified emissions. Account-to-operator matching described in <a href="blog.html">this note</a>.</p>
+        </div>
+        <div>
+          <div class="seclabel" style="display:block;margin-bottom:8px">Related</div>
+          <p style="margin:0;font-size:13px;color:var(--muted);line-height:1.7">Companion to <em>Financial Intermediation in the European Emissions Market</em> (with Robert A. Miller). <a href="research.html">Paper page →</a></p>
+        </div>
+      </div>
+    </div>
+  </main>
+</div>
+<script src="content.js"></script>
+<script src="assets/js/site.js"></script>
+</body>
+</html>
